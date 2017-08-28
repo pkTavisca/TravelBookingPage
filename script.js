@@ -33,3 +33,4 @@ $('.flightAutoselect').autocomplete({
 });
 
 $(".date").datepicker();
+$('.spinner').spinner();
