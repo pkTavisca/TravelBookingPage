@@ -38,13 +38,24 @@
             <article>
                 <div id="flight-departing">
                     <div class="label">Departing Date</div>
-                    <input type="text" class="date">
+                    <input type="text" class="date" name="departingDate">
                 </div>
                 <div id="flight-returning">
                     <div class="label">Returning Date</div>
-                    <input type="text" class="date">
+                    <input type="text" class="date" name="returningDate">
                 </div>
             </article>
+            <article>
+                <div id="adults">
+                    <div class="label">Adults</div>
+                    <input class="spinner" name="noOfAdults">
+                </div>
+                <div id="children">
+                    <div class="label">Children</div>
+                    <input class="spinner" name="noOfChildren">
+                </div>
+            </article>
+            <input type="submit" value="Submit">
         </form>
         <article id="hotelSelection">
             Hotel Selection
