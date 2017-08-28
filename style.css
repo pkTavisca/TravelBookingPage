@@ -54,7 +54,7 @@ header>div>:first-child {
     margin-right: 10px;
 }
 
-#hotelSelection {
+#hotelForm {
     display: none;
 }
 
@@ -88,4 +88,14 @@ header>div>:first-child {
 
 #flightForm>article {
     display: flex;
+}
+
+#children {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#children-list {
+    display: flex;
+    flex-wrap: wrap;
 }

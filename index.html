@@ -48,18 +48,38 @@
             <article>
                 <div id="adults">
                     <div class="label">Adults</div>
-                    <input class="spinner" name="noOfAdults">
+                    <select name="noOfAdults">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
                 </div>
                 <div id="children">
-                    <div class="label">Children</div>
-                    <input class="spinner" name="noOfChildren">
+                    <div>
+                        <div class="label">Children</div>
+                        <select name="noOfChildren" id="noOfChildren">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                    <div id="children-list">
+                    
+                    </div>
                 </div>
             </article>
             <input type="submit" value="Submit">
         </form>
-        <article id="hotelSelection">
-            Hotel Selection
-        </article>
+        <form action="#" id="hotelForm">
+            <article id="hotelSelection">
+                Hotel Selection
+            </article>
+        </form>
     </section>
 </body>
 <script type="text/javascript" src="ExternalScripts/jquery-3.2.1.min.js"></script>
