@@ -5,6 +5,7 @@
     <title>Travel Booking Page</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="Fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="ExternalCSS/jquery-ui.min.css">
 </head>
 
 <body>
@@ -17,11 +18,31 @@
         </div>
     </header>
     <section>
-        <form action="">
+        <form action="" id="flightForm">
             <article id="flightSelection">
                 <div>
                     <span id="oneWay">One Way</span><span id="twoWay">Return</span>
                     <input type="hidden" name="flightSelection" value="oneWay">
+                </div>
+            </article>
+            <article>
+                <div id="flyingFrom">
+                    <div class="label">From</div>
+                    <input class="flightAutoselect" name="flyingFrom">
+                </div>
+                <div id="flyingTo">
+                    <div class="label">To</div>
+                    <input class="flightAutoselect" name="flyingTo">
+                </div>
+            </article>
+            <article>
+                <div id="flight-departing">
+                    <div class="label">Departing Date</div>
+                    <input type="text" class="date">
+                </div>
+                <div id="flight-returning">
+                    <div class="label">Returning Date</div>
+                    <input type="text" class="date">
                 </div>
             </article>
         </form>
@@ -30,7 +51,8 @@
         </article>
     </section>
 </body>
-<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="ExternalScripts/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="ExternalScripts/jquery-ui.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
 
 </html>
