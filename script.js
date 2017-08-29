@@ -37,7 +37,7 @@ twoWay.click(function () {
 });
 
 var airports = ['Pune', 'Mumbai'];
-$('.flightAutoselect').autocomplete({
+$('.locationAutoselect').autocomplete({
     source: airports
 });
 

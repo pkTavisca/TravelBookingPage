@@ -99,3 +99,7 @@ header>div>:first-child {
     display: flex;
     flex-wrap: wrap;
 }
+
+#hotel-details {
+    display: flex;
+}
