@@ -103,3 +103,7 @@ header>div>:first-child {
 #hotel-details {
     display: flex;
 }
+
+#room-details>div>div:nth-child(2) {
+    display: flex;
+}
