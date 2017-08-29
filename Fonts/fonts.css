@@ -2,3 +2,8 @@
     font-family: TypoGraphica;
     src: url(TypoGraphica.otf);
 }
+
+@font-face {
+    font-family: Nobile;
+    src: url(Nobile-Regular.ttf);
+}
