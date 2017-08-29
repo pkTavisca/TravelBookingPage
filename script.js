@@ -63,3 +63,20 @@ $('#noOfChildren').change(function (event) {
 });
 
 //Hotels
+$('#noOfRooms').change(function (event) {
+    var room = $("#room-details");
+    room.empty();
+    var noOfRooms = parseInt(event.target.value);
+    for (var i = 0; i < noOfRooms; i++) {
+        var individualRoom = $('<div><div>Room ' + (i + 1) + '</div></div>');
+        room.append(individualRoom);
+        var indRoomDetails = $('<div>');
+        individualRoom.append(indRoomDetails);
+        var adult = $('<div class="label"></div>');
+        indRoomDetails.append(adult);
+        adult.append('Adults');
+        var child = $('<div class="label"></div>');
+        indRoomDetails.append(child);
+        child.append('Children');
+    }
+});
