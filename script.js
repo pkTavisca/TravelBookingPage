@@ -72,11 +72,31 @@ $('#noOfRooms').change(function (event) {
         room.append(individualRoom);
         var indRoomDetails = $('<div>');
         individualRoom.append(indRoomDetails);
+
         var adult = $('<div class="label"></div>');
         indRoomDetails.append(adult);
-        adult.append('Adults');
+        adult.append('<div>Adults</div>');
+        var adultSelect = $('<select name="noOfAdultsInRoom' + (i + 1) + '"></select>');
+        adult.append(adultSelect);
+        for (var j = 1; j < 7; j++) {
+            adultSelect.append('<option>' + j + '</option>');
+        }
+
         var child = $('<div class="label"></div>');
         indRoomDetails.append(child);
-        child.append('Children');
+        child.append('<div>Children</div>');
+        var childSelect = $('<select name="noOfChildrenInRoom' + (i + 1) + '"></select>');
+        childSelect.addClass('childSelector');
+        child.append(childSelect);
+        for (j = 0; j < 7; j++) {
+            childSelect.append('<option>' + j + '</option>');
+        }
     }
+});
+
+$(document).on('change', '.childSelector', function (event) {
+    var numberOfChildren = parseInt(event.target.value);
+    var parent = $(event.target).parent().parent();
+    
+    console.log(parent);
 });
