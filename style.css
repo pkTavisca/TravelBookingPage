@@ -111,3 +111,8 @@ header>div>:first-child {
 .childrenDetails {
     display: flex;
 }
+
+.label {
+    font-family: Nobile;
+    font-weight: bold;
+}
