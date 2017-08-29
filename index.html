@@ -28,11 +28,11 @@
             <article>
                 <div id="flyingFrom">
                     <div class="label">From</div>
-                    <input class="flightAutoselect" name="flyingFrom">
+                    <input class="locationAutoselect" name="flyingFrom">
                 </div>
                 <div id="flyingTo">
                     <div class="label">To</div>
-                    <input class="flightAutoselect" name="flyingTo">
+                    <input class="locationAutoselect" name="flyingTo">
                 </div>
             </article>
             <article>
@@ -75,9 +75,32 @@
             </article>
             <input type="submit" value="Submit">
         </form>
-        <form action="#" id="hotelForm">
-            <article id="hotelSelection">
-                Hotel Selection
+        <form action="#" id="hotelForm" method="post">
+            <article id="going-to">
+                <div class="label">
+                    Going to
+                </div>
+                <input class="locationAutoselect" name="goingTo">
+            </article>
+            <article id="hotel-details">
+                <div>
+                    <div class="label">Check In</div>
+                    <input type="text" class="date" name="checkIn">
+                </div>
+                <div>
+                    <div class="label">Check Out</div>
+                    <input type="text" class="date" name="checkOut"></div>
+                <div>
+                    <div class="label">Rooms</div>
+                    <select name="noOfRooms" id="noOfRooms">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>5+</option>
+                    </select>
+                </div>
             </article>
         </form>
     </section>
