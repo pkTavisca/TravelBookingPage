@@ -115,4 +115,6 @@ header>div>:first-child {
 .label {
     font-family: Nobile;
     font-weight: bold;
+    padding-top: 20px;
+    padding-left: 10px;
 }
