@@ -70,7 +70,7 @@ $('#noOfRooms').change(function (event) {
     for (var i = 0; i < noOfRooms; i++) {
         var individualRoom = $('<div><div>Room ' + (i + 1) + '</div></div>');
         room.append(individualRoom);
-        var indRoomDetails = $('<div>');
+        var indRoomDetails = $('<div></div>');
         individualRoom.append(indRoomDetails);
 
         var adult = $('<div class="label"></div>');
@@ -91,12 +91,26 @@ $('#noOfRooms').change(function (event) {
         for (j = 0; j < 7; j++) {
             childSelect.append('<option>' + j + '</option>');
         }
+
+        indRoomDetails.append('<div class="childrenDetails"></div>');
     }
 });
 
 $(document).on('change', '.childSelector', function (event) {
     var numberOfChildren = parseInt(event.target.value);
-    var parent = $(event.target).parent().parent();
-    
-    console.log(parent);
+    var parent = $(event.target).parent().parent().children('.childrenDetails');
+    parent.empty();
+    for (var i = 0; i < numberOfChildren; i++) {
+        var hotelRoomString = parent.parent().html();
+        var child = $('<div></div>');
+        child.append('<div>Age of child</div>');
+        var childSelect = $('<select name="child' + (i + 1) + 'OfRoom' + hotelRoomString.match(/\d/) + '"></select>');
+        childSelect.append($('<option value="NA">Age</option>'));
+        childSelect.append($('<option value="<1">Below 1 year</option>'));
+        for (var j = 0; j < 17; j++) {
+            childSelect.append($('<option value=' + (j + 1) + '>' + (j + 1) + '</option>'));
+        }
+        child.append(childSelect);
+        parent.append(child);
+    }
 });
