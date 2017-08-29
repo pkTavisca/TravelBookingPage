@@ -107,3 +107,7 @@ header>div>:first-child {
 #room-details>div>div:nth-child(2) {
     display: flex;
 }
+
+.childrenDetails {
+    display: flex;
+}
